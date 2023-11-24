@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Titan+One&display=swap');
 
 body {
     font-family: 'Titan One', sans-serif;
     background-color: #F5F5F5;
+
 }
 
 #seleccionar-futbolista {
@@ -21,7 +23,6 @@ body {
 .subtitulo {
     display: flex;
     color: #4D4C7D;
-
 }
 
 
@@ -40,7 +41,7 @@ body {
     background: #F99417;
     padding: 10px;
     box-sizing: border-box;
-    margin: 10px;
+    margin: 15px;
     border: 3px solid;
     border-radius: 20px;
 }   
@@ -56,3 +57,89 @@ input {
     background-color: blue;
     border: 2px solid;
 }
+
+#boton-futbolista {
+    color: black;
+    width: 120px;
+    height: 25px;
+    border-radius: 20px;
+    background-color: #8887eb;
+    font-family: 'Titan One', sans-serif;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    margin: 10px;
+}
+
+#seleccionar-ataque {
+    flex-direction: column;
+    align-items: center;
+}
+
+#boton-fuego {
+    color: black;
+    width: 85px;
+    height: 25px;
+    background-color: #8887eb;
+    font-family: 'Titan One', sans-serif;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    margin: 10px;
+}
+
+#boton-Hielo {
+    color: black;
+    width: 85px;
+    height: 25px;
+    background-color: #8887eb;
+    font-family: 'Titan One', sans-serif;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    margin: 10px;
+}
+
+#boton-agua {
+    color: black;
+    width: 85px;
+    height: 25px;
+    background-color: #8887eb;
+    font-family: 'Titan One', sans-serif;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    margin: 10px;
+}
+
+#mensajes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 60px;
+    background-color: yellow;
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+#mensajes p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+#boton-reiniciar {
+    border: none;
+    color: black;
+    width: 85px;
+    height: 25px;
+    background-color: #8887eb;
+    font-family: 'Titan One', sans-serif;
+}
+
+
+
