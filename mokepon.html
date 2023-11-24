@@ -2,50 +2,77 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>MOKEPON!</title>
+        <title>FÚTBOL</title>
         <script src="./js/mokepon.js"> </script>
+        <link rel="stylesheet" href="./styles.css">
     </head>
     <body>
-        <h1>MOKEPON! 🔥💧🧊</h1>
-
+        
         <section id="seleccionar-futbolista">
-            <h2>Elige a tu futbolista:</h2>
+            <h1 class ="titulo">FÚTBOL</h1>
             
-            <input type="radio" name="futbolista" id="Messi"/>
-            <label for="Messi">Messi</label>
+            <h2 class="subtitulo">Elige a tu futbolista:</h2>
             
-            <input type="radio" name="futbolista" id="Neymar"/>
-            <label for="Neymar">Neymar</label>
+            <div class="tarjetas">
+                <input type="radio" name="futbolista" id="Messi"/>
+                <label class="tarjeta-mokepon" for="Messi">
+                    <p>Messi</p>
+                    <img src="./fotos/messi.png" alt="Messi">
+                </label>
             
-            <input type="radio" name="futbolista" id="Cristiano"/>
-            <label for="Cristiano">Cristiano</label>
+                <input type="radio" name="futbolista" id="Neymar"/>
+                <label class="tarjeta-mokepon" for="Neymar">
+                    <p>Neymar</p>
+                    <img src="./fotos/neymar.png" alt="
+                    Neymar">
+                </label>
+            
+                <input type="radio" name="futbolista" id="Cristiano"/>
+                <label class="tarjeta-mokepon" for="Cristiano">
+                    <p>Cristiano</p>
+                    <img src="./fotos/ronaldo.png" alt="Cristiano">
+                </label>
+            </div>
+
+            
             
 
             <button id="boton-futbolista">Seleccionar</button>
         </section>
             
         <section id="seleccionar-ataque">
-            <h2>Elige tu ataque:</h2>
+            <h1 class="titulo">FÚTBOL</h1>
 
-            <p>Tu futbolista <span id="futbolista-jugador"></span> tiene <span id="vidas-jugador">3</span> vidas</p>
-            <p>El futbolista <span id="futbolista-enemigo"></span> del enemigo  tiene <span id="vidas-enemigo">3</span> vidas</p>
-
-
-            <p>
+            <h2 class="subtitulo">
+                Elige tu ataque:
+            </h2>
+                
+            <div class="botones-ataques">
                 <button id="boton-fuego">Fuego 🔥</button>
                 <button id="boton-agua">Agua 💧</button>
                 <button id="boton-Hielo">Hielo 🧊</button>
-            </p>
-        </section>
+            </div>
 
-        <section id="mensajes">
+            <div id="mensajes">
+                <p id="resultado">
+                        SUERTEE
+                </p>
+                <section id="reiniciar">
+                        <button id="boton-reiniciar">Reiniciar</button>
+                </section>  
+            </div>
             
+            <div>
+                <div id="ataquesJugador"></div>
+                <div id="ataquesEnemigo"></div>
+                <p>
+                    Tu futbolista <span          id="futbolista-jugador"></span> tiene <span id="vidas-jugador">3</span> vidas
+                </p>
+                        
+                <p>
+                    El futbolista <span id="futbolista-enemigo"></span> del enemigo  tiene <span id="vidas-enemigo">3</span> vidas
+                </p>    
+            </div> 
         </section>
-
-        <section id="reiniciar">
-            <button id="boton-reiniciar">Reiniciar</button>
-        </section>
-
-       
     </body>
 </html>
