@@ -26,7 +26,7 @@ body {
 }
 
 
-.tarjetas {
+.tarjetas, .botones-ataques {
     display: flex;
     gap: 10px;
 
@@ -52,10 +52,12 @@ body {
 
 input {
     display: none;
-    width: 25px;
-    height: 25px;
-    background-color: blue;
-    border: 2px solid;
+}
+
+input:checked + label {
+    background-color: red;
+    border: 3.8px solid;
+
 }
 
 #boton-futbolista {
@@ -141,5 +143,24 @@ input {
     font-family: 'Titan One', sans-serif;
 }
 
+.ataques {
+    display: grid;
+    grid-template-columns: 150px 150px;
+}
 
+#vidas-jugador, #vidas-enemigo {
+    font-size: 32px;
+    margin-bottom: 0;
+}
 
+.ataques-del-jugador, .ataques-del-enemigo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 620px) {
+    .tarjetas, .botones-ataques{
+        flex-direction: column;
+    }
+}
