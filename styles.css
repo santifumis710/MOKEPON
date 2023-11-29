@@ -93,7 +93,7 @@ input:checked + label {
     align-items: center;
 }
 
-#boton-fuego {
+#boton-Izquierda {
     color: black;
     width: 85px;
     height: 25px;
@@ -105,7 +105,7 @@ input:checked + label {
     margin: 10px;
 }
 
-#boton-Hielo {
+#boton-Derecha {
     color: black;
     width: 85px;
     height: 25px;
@@ -117,7 +117,7 @@ input:checked + label {
     margin: 10px;
 }
 
-#boton-agua {
+#boton-Medio {
     color: black;
     width: 85px;
     height: 25px;
@@ -128,6 +128,21 @@ input:checked + label {
     font-size: 12px;
     margin: 10px;
 }
+
+#VS {
+    display: flex;
+}
+
+#imagen-futbolista-jugador, #imagen-arquero-enemigo {
+    width: 50px;
+    height: 50px;
+    margin-right: 50px;
+}
+
+#imagen-futbolista-jugador img, #imagen-arquero-enemigo img{
+    width: 100px;
+}
+
 
 #mensajes {
     display: flex;
@@ -139,7 +154,7 @@ input:checked + label {
     background-color: yellow;
     padding: 10px;
     border-radius: 15px;
-    margin-top: 10px;
+    margin: 10px 50px 0px 50px;
 }
 
 #mensajes p {
