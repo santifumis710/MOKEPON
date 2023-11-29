@@ -3,14 +3,18 @@ const botonHielo = document.getElementById('boton-Hielo')
 const botonAgua = document.getElementById('boton-agua')
 const botonFuego = document.getElementById('boton-fuego')
 const botonfutbolistaJugador = document.getElementById('boton-futbolista')
+const botonarqueroJugador = document.getElementById('boton-arquero')
 const sectionReiniciar = document.getElementById('reiniciar')
 
 const sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
 const sectionSeleccionarFutbolista = document.getElementById('seleccionar-futbolista')
+const sectionSeleccionarArquero = document.getElementById('seleccionar-arquero')
 
 const spanfutbolistaJugador = document.getElementById('futbolista-jugador')
+const spanarqueroJugador = document.getElementById('')
 
 const spanfutbolistaEnemigo = document.getElementById('futbolista-enemigo')
+const spanarqueroEnemigo = document.getElementById('')
 
 const spanVidasJugador = document.getElementById('vidas-jugador')
 const spanVidasEnemigo = document.getElementById('vidas-enemigo')
@@ -19,19 +23,27 @@ const sectionMensajes = document.getElementById('resultado')
 const ataquesJugador = document.getElementById('ataquesJugador')
 const ataquesEnemigo = document.getElementById('ataquesEnemigo')
 const contenedorTarjetas = document.getElementById('contenedorTarjetas')
+constcontenedorTarjetasArquero = document.getElementById('contenedorTarjetasArquero')
 
 let futbolistas = []
+let arqueros  = []
 let ataqueJugador
 let ataqueEnemigo
 let opcionDeFutbolistas
 let inputMessi 
 let inputNeymar    
 let inputCristiano 
+
+let opcionDeArqueros
+let inputDibu
+let inputCasillas
+let inputAlisson
+
 let vidasJugador = 3
 let vidasEnemigo = 3
 
 class Futbolista {
-    constructor (nombre, foto, vida,) {
+    constructor (nombre, foto,) {
         this.nombre = nombre
         this.foto = foto
     }
@@ -41,13 +53,25 @@ let Messi = new Futbolista('Messi', './fotos/Messi.png')
 let Neymar = new Futbolista('Neymar', './fotos/Neymar.png')
 let Cristiano = new Futbolista('Cristiano', './fotos/ronaldo.png')
 
+class Arquero {
+    constructor (nombre, foto) {
+        this.nombre = nombre
+        this.foto = foto
+    }
+}
+
+let Dibu = new Arquero('Dibu', './fotos/Dibu.png')
+let Casillas = new Arquero('Casillas', './fotos/Casillas.png')
+let Alisson = new Arquero ('Alisson', './fotos/Alisson.png')
 
 
 futbolistas.push(Messi, Neymar, Cristiano)
 
+arqueros.push(Dibu, Casillas, Alisson)
 
 function iniciarJuego() {
     sectionSeleccionarAtaque.style.display = 'none'
+    sectionSeleccionarArquero.style.display = 'none'
 
     futbolistas.forEach((futbolista) => {
         opcionDeFutbolistas = `
@@ -64,6 +88,23 @@ function iniciarJuego() {
         inputCristiano = document.getElementById('Cristiano')
 })
 
+    arqueros.forEach((arquero) => {
+        opcionDeArqueros = `
+        <input type="radio" name="futbolista" id=${arquero.nombre} />
+        <label class="tarjeta-mokepon" for="${arquero.nombre}">
+            <p>${arquero.nombre}</p>
+            <img src="${arquero.foto}" alt="${arquero.nombre}">
+        </label>
+        `
+        contenedorTarjetasArquero.innerHTML += opcionDeArqueros
+
+        inputDibu = document.getElementById('Dibu')
+        inputCasillas = document.getElementById('Casillas')
+        inputAlisson = document.getElementById('Alisson')
+    })
+
+
+
     sectionReiniciar.style.display = 'none'
     botonfutbolistaJugador.addEventListener('click', seleccionarfutbolistaJugador)
     botonFuego.addEventListener('click', ataqueFuego)
@@ -76,8 +117,9 @@ function iniciarJuego() {
 
 
 function seleccionarfutbolistaJugador() {
-    sectionSeleccionarAtaque.style.display = 'flex'    
+    sectionSeleccionarAtaque.style.display = 'none'    
     sectionSeleccionarFutbolista.style.display = 'none'
+    sectionSeleccionarArquero.style.display = 'flex'
 
     if(inputMessi.checked) {
         spanfutbolistaJugador.innerHTML = inputMessi.id
@@ -89,9 +131,29 @@ function seleccionarfutbolistaJugador() {
         alert("Selecciona un futbolista");
         reiniciarJuego()
     }
+    
     seleccionarfutbolistaEnemigo()
     
-    botonfutbolistaJugador.disabled = true
+    botonarqueroJugador.addEventListener('click', seleccionarArqueroJugador)
+}
+
+function seleccionarArqueroJugador() {
+    sectionSeleccionarAtaque.style.display = 'flex'
+    sectionSeleccionarFutbolista.style.display = 'none'
+    sectionSeleccionarArquero.style.display = 'none'
+    
+    if(inputDibu.checked) {
+        spanarqueroJugador.innerHTML = inputDibu.id
+    } else if(inputCasillas.checked) {
+        spanarqueroJugador.innerHTML = inputCasillas.id
+    } else if(inputAlisson.checked) {
+        spanarqueroJugador.innerHTML = inputAlisson.id
+    } else {
+        alert("Selecciona un arquero");
+        seleccionarArqueroJugador()
+    }
+    
+    seleccionarArqueroEnemigo()
 }
 
 function seleccionarfutbolistaEnemigo() {
@@ -107,8 +169,17 @@ function seleccionarfutbolistaEnemigo() {
     } else {
         spanfutbolistaEnemigo.innerHTML = 'Cristiano'
     }
+}
+
+function seleccionarArqueroEnemigo() {
+    let arqueroAleatorio = aleatorio (0, arqueros.length - 1)
+
+    if (arqueroAleatorio == 1) {
+
+    }
     
 }
+
 
 function ataqueFuego() {
     ataqueJugador = 'Fuego'
