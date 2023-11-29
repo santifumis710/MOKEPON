@@ -9,7 +9,7 @@ body {
     background-attachment: fixed;
 }
 
-#seleccionar-futbolista {
+#seleccionar-futbolista, #seleccionar-arquero {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -75,7 +75,7 @@ input:checked + label {
 
 }
 
-#boton-futbolista {
+#boton-futbolista, #boton-arquero {
     color: black;
     width: 120px;
     height: 25px;
