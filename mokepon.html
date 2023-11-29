@@ -46,25 +46,29 @@
         
 
         <section id="seleccionar-ataque">
-            <h1 class="titulo">FÚTBOL</h1>
+            <h1 class="titulo">PENALES</h1>
 
             <h2 class="subtitulo">
-                Elige tu ataque:
+                Elige a donde patear:
             </h2>
                 
             <div class="botones-ataques">
-                <button id="boton-fuego">Fuego 🔥</button>
-                <button id="boton-agua">Agua 💧</button>
-                <button id="boton-Hielo">Hielo 🧊</button>
+                <button id="boton-Izquierda">Izquierda</button>
+                <button id="boton-Medio">Medio</button>
+                <button id="boton-Derecha">Derecha</button>
             </div>
-
-            <div id="mensajes">
-                <p id="resultado">
+            <div id="VS">
+                <div id="imagen-futbolista-jugador">
+                    
+                </div>
+                <div id="mensajes">
+                    <p id="resultado">
                         SUERTEE
-                </p>
-                <section id="reiniciar">
-                        <button id="boton-reiniciar">Reiniciar</button>
-                </section>  
+                    </p>
+                </div>
+                <div id="imagen-arquero-enemigo">
+                    
+                </div>
             </div>
             
             <div class="ataques">
@@ -80,6 +84,58 @@
                 </div>     
             </div> 
         </section>
+
+        <section id="seleccionar-defensa">
+            <h1 class="titulo">PENALES</h1>
+
+            <h2 class="subtitulo">
+                Elige a donde tirarte:
+            </h2>
+                
+            <div class="botones-ataques">
+                <button id="boton-Izquierda">Izquierda</button>
+                <button id="boton-Medio">Medio</button>
+                <button id="boton-Derecha">Derecha</button>
+            </div>
+            <div id="VS">
+                <div id="imagen-jugador">
+                    
+                </div>
+                <div id="mensajes">
+                    <p id="resultado">
+                        SUERTEE
+                    </p>
+                    
+                </div>
+                <div id="imagen-enemigo">
+                    
+                </div>
+            </div>
+            
+            <div class="ataques">
+                <div class="ataques-del-jugador">
+                    <p id="vidas-jugador">3</p>
+                    <p id="futbolista-jugador"></p>
+                    <div id="ataquesJugador"></div>
+                </div>
+                <div class="ataques-del-enemigo">
+                    <p id="vidas-enemigo">3</p>
+                    <p id="futbolista-enemigo"></p>
+                    <div id="ataquesEnemigo"></div>
+                </div>     
+            </div>
+        </section>
+
+        <section id="seccion-final">
+           
+           
+            <section id="reiniciar">
+                <button id="boton-reiniciar">Reiniciar</button>
+            </section>  
+        
+        </section>
+
+
         <script src="./mokepon.js"> </script>
     </body>
 </html>
