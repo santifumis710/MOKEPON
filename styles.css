@@ -88,12 +88,12 @@ input:checked + label {
     margin: 10px;
 }
 
-#seleccionar-ataque {
+#seleccionar-ataque, #seleccionar-defensa{
     flex-direction: column;
     align-items: center;
 }
 
-#boton-Izquierda {
+#boton-ataque-Izquierda, #boton-defensa-izquierda{
     color: black;
     width: 85px;
     height: 25px;
@@ -105,7 +105,7 @@ input:checked + label {
     margin: 10px;
 }
 
-#boton-Derecha {
+#boton-ataque-Derecha, #boton-defensa-derecha {
     color: black;
     width: 85px;
     height: 25px;
@@ -117,7 +117,7 @@ input:checked + label {
     margin: 10px;
 }
 
-#boton-Medio {
+#boton-ataque-Medio, #boton-defensa-medio{
     color: black;
     width: 85px;
     height: 25px;
@@ -133,13 +133,13 @@ input:checked + label {
     display: flex;
 }
 
-#imagen-futbolista-jugador, #imagen-arquero-enemigo {
+#imagen-futbolista-jugador, #imagen-arquero-enemigo, #imagen-arquero-jugador, #imagen-futbolista-enemigo{
     width: 50px;
     height: 50px;
     margin-right: 50px;
 }
 
-#imagen-futbolista-jugador img, #imagen-arquero-enemigo img{
+#imagen-futbolista-jugador img, #imagen-arquero-enemigo img, #imagen-arquero-jugador img, #imagen-futbolista-enemigo img{
     width: 100px;
 }
 
@@ -164,7 +164,7 @@ input:checked + label {
     margin-top: 5px;
 }
 
-#boton-reiniciar {
+#boton-reiniciar, #boton-continuar-ataque, #boton-continuar-defensa {
     border: none;
     color: black;
     width: 85px;
