@@ -53,19 +53,24 @@
             </h2>
                 
             <div class="botones-ataques">
-                <button id="boton-Izquierda">Izquierda</button>
-                <button id="boton-Medio">Medio</button>
-                <button id="boton-Derecha">Derecha</button>
+                <button id="boton-ataque-Izquierda">Izquierda</button>
+                <button id="boton-ataque-Medio">Medio</button>
+                <button id="boton-ataque-Derecha">Derecha</button>
             </div>
             <div id="VS">
                 <div id="imagen-futbolista-jugador">
                     
                 </div>
+
                 <div id="mensajes">
                     <p id="resultado">
                         SUERTEE
                     </p>
+                    <section id="continuar-ataque">
+                        <button id="boton-continuar-ataque">Continuar</button>
+                    </section>
                 </div>
+
                 <div id="imagen-arquero-enemigo">
                     
                 </div>
@@ -73,13 +78,11 @@
             
             <div class="ataques">
                 <div class="ataques-del-jugador">
-                    <p id="vidas-jugador">3</p>
                     <p id="futbolista-jugador"></p>
                     <div id="ataquesJugador"></div>
                 </div>
                 <div class="ataques-del-enemigo">
-                    <p id="vidas-enemigo">3</p>
-                    <p id="futbolista-enemigo"></p>
+                    <p id="arquero-enemigo"></p>
                     <div id="ataquesEnemigo"></div>
                 </div>     
             </div> 
@@ -92,43 +95,48 @@
                 Elige a donde tirarte:
             </h2>
                 
-            <div class="botones-ataques">
-                <button id="boton-Izquierda">Izquierda</button>
-                <button id="boton-Medio">Medio</button>
-                <button id="boton-Derecha">Derecha</button>
+            <div class="botones-defensa">
+                <button id="boton-defensa-izquierda">Izquierda</button>
+                <button id="boton-defensa-medio">Medio</button>
+                <button id="boton-defensa-derecha">Derecha</button>
             </div>
             <div id="VS">
-                <div id="imagen-jugador">
+                <div id="imagen-arquero-jugador">
                     
                 </div>
                 <div id="mensajes">
                     <p id="resultado">
                         SUERTEE
                     </p>
-                    
+                    <section id="continuar-defensa">
+                        <button id="boton-continuar-defensa">Continuar</button>
+                    </section>
                 </div>
-                <div id="imagen-enemigo">
+                <div id="imagen-futbolista-enemigo">
                     
                 </div>
             </div>
             
             <div class="ataques">
                 <div class="ataques-del-jugador">
-                    <p id="vidas-jugador">3</p>
-                    <p id="futbolista-jugador"></p>
+                    <p id="arquero-jugador"></p>
                     <div id="ataquesJugador"></div>
                 </div>
                 <div class="ataques-del-enemigo">
-                    <p id="vidas-enemigo">3</p>
                     <p id="futbolista-enemigo"></p>
                     <div id="ataquesEnemigo"></div>
                 </div>     
             </div>
         </section>
 
-        <section id="seccion-final">
-           
-           
+        <section id="seccion-final-ganador">
+            <section id="reiniciar">
+                <button id="boton-reiniciar">Reiniciar</button>
+            </section>  
+        
+        </section>
+
+        <section id="seccion-final-perdedor">
             <section id="reiniciar">
                 <button id="boton-reiniciar">Reiniciar</button>
             </section>  
